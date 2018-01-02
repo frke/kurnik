@@ -111,14 +111,15 @@ printf("Danes je %d dan v letu\n", danvletu);
 printf("poteklo je %d minut od polnoči\n", minut);
 
 int dan_i = danvletu - 313; //koliko dni je minilo od 10.11.2017, ko je bil 313 dan v letu
+if (dan_i < 0 ) {  // Novo leto 2018
+	dan_i =  365 - 313 + danvletu;
+}
 int zjutraj_prizgi = ( 6 * 60 + 45 ) - dan_i; // 6:45 je 405 minut od polnoči (6 * 60 + 45)
 int zjutraj_ugasni = 8 * 60 ; // ob 8h ugasne luč 
 int zvecer_prizgi= 16 * 60 ; // ob 16h se prižge
 int zvecer_ugasni= (17 * 60 ) + dan_i; //ob 17:00 je 1020 minut od polnoči
 
-if (dan_i < 0 ) {  // Novo leto 2018
-	dan_i =  365 - 313 + danvletu;
-}
+
 
 printf("zjutraj_prizgi %d minut od polnoci, ob %02d:%02d uri\n", zjutraj_prizgi, zjutraj_prizgi / 60, zjutraj_prizgi % 60);
 printf("zjutraj_ugasni %d minut od polnoci, ob %02d:%02d uri\n", zjutraj_ugasni, zjutraj_ugasni / 60, zjutraj_ugasni % 60);
