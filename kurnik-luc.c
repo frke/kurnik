@@ -123,8 +123,8 @@ dan_i=54;
    }
 
    int zjutraj_prizgi = ( 6 * 60 + 45 ) - dan_i; // 6:45 je 405 minut od polnoči (6 * 60 + 45)
-   int zjutraj_ugasni = 7 * 60 -2 ; // ob 6:58h ugasne luč - le do 8:00 teče minutni cron
-   int zvecer_prizgi= 17 * 60 ; // ob 17h se prižge
+   int zjutraj_ugasni = 8 * 60 -2 ; // ob 7:58h ugasne luč - le do 8:00 teče minutni cron
+   int zvecer_prizgi= 16 * 60 ; // ob 16h se prižge
    int zvecer_ugasni= (17 * 60 ) + dan_i; //ob 17:00 je 1020 minut od polnoči
 
 
